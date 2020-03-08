@@ -3,6 +3,7 @@ import HomePage from "./HomePage";
 import AboutPage from "./AboutPage";
 import Header from "./common/Header";
 import CoursesPage from "./CoursesPage";
+import ManageCoursePage from "./ManageCoursePage";
 import NotFoundPage from "./NotFoundPage";
 
 import { Route, Switch, Redirect } from "react-router-dom";
@@ -14,6 +15,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={HomePage} />
         <Route path="/courses" component={CoursesPage} />
+        <Route path="/course/:slug" component={ManageCoursePage} />
         <Route path="/about" component={AboutPage} />
         <Redirect from="/about-page" to="about" />
         <Route component={NotFoundPage} />
